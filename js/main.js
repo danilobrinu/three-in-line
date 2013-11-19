@@ -66,7 +66,7 @@ var winnerMessage = function() {
     .attr({stroke: '#34495e'})
     .animate({
       strokeWidth: 300
-    }, 1000, mina.elastic);
+    }, 1000, mina.bounce);
   message = paper.text(150, 80, 'WINNER IS')
     .attr(winnerMessageAttr);
   winner = paper.text(150, 220, currentPlayer.toUpperCase())
@@ -93,7 +93,7 @@ var drawMessage = function() {
     .attr({stroke: '#34495e'})
     .animate({
       strokeWidth: 300
-    }, 1000, mina.elastic);
+    }, 1000, mina.bounce);
   message = paper.text(150, 80, 'THIS IS')
     .attr(winnerMessageAttr);
   winner = paper.text(150, 220, 'DRAW')
