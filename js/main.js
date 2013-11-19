@@ -62,11 +62,14 @@ var isWinner = function(playerMovements) {
   return resultOf('x') || resultOf('y') || diagonalResult();
 };
 var winnerMessage = function() {
-  background = paper.rect(150,150,1,1)
-    .attr({stroke: '#34495e'})
+  background = paper.rect(150,150,0,0)
+    .attr({fill: '#34495e'})
     .animate({
-      strokeWidth: 300
-    }, 500, mina.backout);
+      x: 0,
+      y: 0,
+      width: 300,
+      height: 300
+    }, 500, mina.elastic);
   message = paper.text(150, 80, 'WINNER IS')
     .attr(winnerMessageAttr);
   winner = paper.text(150, 220, currentPlayer.toUpperCase())
@@ -89,11 +92,14 @@ var winnerMessage = function() {
   paper.group(background, message, winner, buttonRestart, textRestart);
 };
 var drawMessage = function() {
-  background = paper.rect(150,150,1,1)
-    .attr({stroke: '#34495e'})
+  background = paper.rect(150,150,0,0)
+    .attr({fill: '#34495e'})
     .animate({
-      strokeWidth: 300
-    }, 300, mina.backout);
+      x: 0,
+      y: 0,
+      width: 300,
+      height: 300
+    }, 300, mina.elastic);
   message = paper.text(150, 80, 'THIS IS')
     .attr(winnerMessageAttr);
   winner = paper.text(150, 220, 'DRAW')
