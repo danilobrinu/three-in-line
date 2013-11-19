@@ -108,6 +108,9 @@ var drawMessage = function() {
     .attr({
       fill: '#2c3e50',
       'cursor': 'pointer'
+    })
+    .click(function(){
+      window.location.reload(false);
     });
   restartText = paper.text(150, 150, 'RESTART GAME')
     .attr({
@@ -115,9 +118,6 @@ var drawMessage = function() {
       'font-family': 'monospace',
       'text-anchor': 'middle',
       'cursor': 'pointer'
-    })
-    .click(function(){
-      window.location.reload(false);
     });
   paper.group(background, message, winner, restartButton, restartText);
 };
